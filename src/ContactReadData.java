@@ -1,4 +1,4 @@
-public class ContactReadData{
+public class ContactReadData {
 
     private String firstName;
     private String secondName;
@@ -75,4 +75,6 @@ public class ContactReadData{
     public Integer getConstructorCode() {
         return constructorCode;
     }
+
+
 }

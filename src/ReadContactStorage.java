@@ -5,6 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class ReadContactStorage {
     private ArrayList<ContactReadData>contactList = new ArrayList<>();
@@ -49,10 +50,12 @@ public class ReadContactStorage {
         }
 
     }
-
+     private void sortMylist(){
+         Collections.sort(contactList,new SortByName());
+     }
 
     public ArrayList<ContactReadData> getContactList() {
-
+         sortMylist();
         return contactList;
     }
 }

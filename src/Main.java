@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Scanner;
 
 public class Main {
@@ -22,8 +21,7 @@ public class Main {
 
                   switch (choice) {
                       case 1:
-                          inputInstraction();
-                          //getNewContactData();
+                          inputInstruction();
                           System.out.print(">> ");
                           scanner.nextLine();
                           String newContactData = scanner.nextLine();
@@ -40,10 +38,9 @@ public class Main {
                                   contactList.add(new Contact(arrayContactData[0], arrayContactData[1], arrayContactData[2], arrayContactData[3], arrayContactData[4], arrayContactData[5]));
                               }
                           } else {
-                              inputInstraction();
+                              inputInstruction();
 
                           }
-                          Collections.sort(contactList, new SortByName());
                           ContactStorage storage = new ContactStorage(contactList);
                           break;
                       case 2:
@@ -71,9 +68,14 @@ public class Main {
                           break;
                       case 4:
                           System.out.println("UPDATING");
+
                           break;
                       case 5:
-                          System.out.println("SEARCHING");
+                          searchNameInstruction();
+                          System.out.print(">> ");
+                          scanner.nextLine();
+                          String searchName = scanner.nextLine();
+                          SearchContact searchContact = new SearchContact(searchName);
                           break;
                       case 6:
                           menu();
@@ -109,13 +111,22 @@ public class Main {
     }
 
 
-    public static void inputInstraction(){
+    public static void inputInstruction(){
         System.out.println("____________________________ADDING NEW CONTACT___________________________");
         System.out.println("Provide : FirstName SecondName Surname PhoneNumber TelNumber EmailAddress");
         System.out.println("PLEASE NOTE : FirstName, Surname, PhoneNumber Can not be empty           ");
         System.out.println("_________________________________________________________________________");
         System.out.println();
+
+
+
+    }
+    public static void searchNameInstruction(){
+        System.out.println("__________________________SEARCHING FOR CONTACT__________________________");
+        System.out.println("Provide : Name to search for                                             ");
+        System.out.println("_________________________________________________________________________");
         System.out.println();
+
 
 
     }
