@@ -65,6 +65,11 @@ public class Main {
                           break;
                       case 3:
                           System.out.println("DELETING");
+                          deletingUserInstruction();
+                          System.out.print(">> ");
+                          scanner.nextLine();
+                          String deleteContactName = scanner.nextLine();
+                          SearchContact contactToBeDeleted = new SearchContact(deleteContactName,3);
                           break;
                       case 4:
                           System.out.println("UPDATING");
@@ -75,7 +80,7 @@ public class Main {
                           System.out.print(">> ");
                           scanner.nextLine();
                           String searchName = scanner.nextLine();
-                          SearchContact searchContact = new SearchContact(searchName);
+                          SearchContact searchContact = new SearchContact(searchName,5);
                           break;
                       case 6:
                           menu();
@@ -117,17 +122,18 @@ public class Main {
         System.out.println("PLEASE NOTE : FirstName, Surname, PhoneNumber Can not be empty           ");
         System.out.println("_________________________________________________________________________");
         System.out.println();
-
-
-
     }
     public static void searchNameInstruction(){
         System.out.println("__________________________SEARCHING FOR CONTACT__________________________");
         System.out.println("Provide : Name to search for                                             ");
         System.out.println("_________________________________________________________________________");
         System.out.println();
-
-
+    }
+    public static void deletingUserInstruction(){
+        System.out.println("__________________________DELETE CONTACT_________________________________");
+        System.out.println("Provide : Name to delete for                                             ");
+        System.out.println("_________________________________________________________________________");
+        System.out.println();
 
     }
 }
