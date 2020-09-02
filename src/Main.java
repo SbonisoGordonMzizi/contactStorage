@@ -11,7 +11,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         menu();
         while (loopControl) {
-        System.out.print(">> ");
+        System.out.print("> ");
         String userChoice = scanner.next();
         Integer userIntChoice = Integer.parseInt(userChoice);
 
@@ -64,7 +64,6 @@ public class Main {
                           ContactViews contactViews = new ContactViews(contactReadData, viewType);
                           break;
                       case 3:
-                          System.out.println("DELETING");
                           deletingUserInstruction();
                           System.out.print(">> ");
                           scanner.nextLine();
@@ -73,7 +72,11 @@ public class Main {
                           break;
                       case 4:
                           System.out.println("UPDATING");
-
+                          userUpdateInstruction();
+                          System.out.print(">> ");
+                          scanner.nextLine();
+                          String updateContactName = scanner.nextLine();
+                          SearchContact updateToBeDeleted = new SearchContact(updateContactName,4);
                           break;
                       case 5:
                           searchNameInstruction();
@@ -95,8 +98,6 @@ public class Main {
                           break;
                   }
               }
-//scanner.close();
-
 
     }
 
@@ -132,6 +133,13 @@ public class Main {
     public static void deletingUserInstruction(){
         System.out.println("__________________________DELETE CONTACT_________________________________");
         System.out.println("Provide : Name to delete for                                             ");
+        System.out.println("_________________________________________________________________________");
+        System.out.println();
+
+    }
+    public static void userUpdateInstruction(){
+        System.out.println("__________________________UPDATING CONTACT_______________________________");
+        System.out.println("Provide : Name to update                                                 ");
         System.out.println("_________________________________________________________________________");
         System.out.println();
 

@@ -76,5 +76,35 @@ public class ContactReadData {
         return constructorCode;
     }
 
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
+    public void setSecondName(String secondName) {
+        this.secondName = secondName;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public void setCellNo(String cellNo) {
+        this.cellNo = cellNo;
+    }
+
+    public void setTellPhoneNumber(String tellPhoneNumber) {
+        this.tellPhoneNumber = tellPhoneNumber;
+    }
+
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
+    }
+
+    public void setTimeStamp(String timeStamp) {
+        this.timeStamp = timeStamp;
+    }
+
+    public void setConstructorCode(Integer constructorCode) {
+        this.constructorCode = constructorCode;
+    }
 }

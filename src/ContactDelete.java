@@ -2,13 +2,20 @@ import java.util.ArrayList;
 
 public class ContactDelete {
     private ArrayList<ContactReadData> searchResult;
-    private ArrayList<Contact> deleteResult;
     private String searchByname;
+    private int controller;
     public ContactDelete(ArrayList<ContactReadData> searchResult,String searchByName) {
         this.searchResult = searchResult;
         this.searchByname = searchByName;
         deleteContact();
         displayUpTodateList();
+
+    }
+    public ContactDelete(ArrayList<ContactReadData> searchResult,String searchByName,int controller) {
+        this.searchResult = searchResult;
+        this.searchByname = searchByName;
+        deleteContact();
+        displayUpTodateList1();
 
     }
     private void deleteContact(){
@@ -22,6 +29,9 @@ public class ContactDelete {
     private void displayUpTodateList(){
         System.out.println("_____________SUCCESSFULLY DELETED ____________");
         ContactViews contactViews = new ContactViews(searchResult,"basic");
+        ContactStorage contactStorage = new ContactStorage(searchResult,3);
+    }
+    private void displayUpTodateList1(){
         ContactStorage contactStorage = new ContactStorage(searchResult,3);
     }
 }

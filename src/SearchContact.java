@@ -15,6 +15,7 @@ public class SearchContact {
     private ArrayList<ContactReadData> contactList;
     private  ArrayList<ContactReadData> searchResult = new ArrayList<>();
     private boolean found = false;
+
     public SearchContact(String searchByName, int deleteOrViews) {
         this.searchByName = searchByName;
         this.deleteOrViews = deleteOrViews;
@@ -70,6 +71,8 @@ public class SearchContact {
             ContactViews contactViews = new ContactViews(searchResult, "full");
         }else if (deleteOrViews == 3){
             ContactDelete contactDelete = new ContactDelete(contactList,searchByName);
+        }else if(deleteOrViews == 4){
+            UpdateContact updateContact = new UpdateContact(contactList,searchResult,searchByName);
         }
     }
 
