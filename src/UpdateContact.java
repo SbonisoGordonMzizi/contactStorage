@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 
-public class UpdateContact {
+public final  class UpdateContact {
     private String firstName = "";;
     private String secondName = "";
     private String surname ="";
@@ -125,33 +125,37 @@ public class UpdateContact {
        Scanner scanner = new Scanner(System.in);
        String mm = scanner.nextLine();
        String[] mmString = mm.split(" ");
-        for(int i = 0; i < mmString.length; i++){
-            if(mmString[i].equals("1")){
-                firstName =mmString[i+1];
-                userlist.get(index).setFirstName(mmString[i+1]);
-            }
-            if(mmString[i].equals("2")){
-                secondName = mmString[i+1];
-                userlist.get(index).setSecondName(mmString[i+1]);
-            }
-            if(mmString[i].equals("3")){
-                surname = mmString[i+1];
-                userlist.get(index).setSurname(mmString[i+1]);
-            }
-            if(mmString[i].equals("4")){
-                cellNo = mmString[i+1];
-                userlist.get(index).setCellNo(mmString[i+1]);
-            }
-            if(mmString[i].equals("5")){
-                tellPhoneNumber = mmString[i+1];
-                userlist.get(index).setTellPhoneNumber(mmString[i+1]);
-            }
-            if(mmString[i].equals("6")){
-                emailAddress = mmString[i+1];
-                userlist.get(index).setEmailAddress(mmString[i+1]);
-            }
-        }
-       removeblanks();
+       if(mmString.length > 2) {
+           for (int i = 0; i < mmString.length; i++) {
+               if (mmString[i].equals("1")) {
+                   firstName = mmString[i + 1];
+                   userlist.get(index).setFirstName(mmString[i + 1]);
+               }
+               if (mmString[i].equals("2")) {
+                   secondName = mmString[i + 1];
+                   userlist.get(index).setSecondName(mmString[i + 1]);
+               }
+               if (mmString[i].equals("3")) {
+                   surname = mmString[i + 1];
+                   userlist.get(index).setSurname(mmString[i + 1]);
+               }
+               if (mmString[i].equals("4")) {
+                   cellNo = mmString[i + 1];
+                   userlist.get(index).setCellNo(mmString[i + 1]);
+               }
+               if (mmString[i].equals("5")) {
+                   tellPhoneNumber = mmString[i + 1];
+                   userlist.get(index).setTellPhoneNumber(mmString[i + 1]);
+               }
+               if (mmString[i].equals("6")) {
+                   emailAddress = mmString[i + 1];
+                   userlist.get(index).setEmailAddress(mmString[i + 1]);
+               }
+           }
+           removeblanks();
+       }else {
+           messageError();
+       }
    }
    private void indexSearch(){
        for(int i = 0; i < userlist.size(); i++){
@@ -202,6 +206,11 @@ public class UpdateContact {
        ContactStorage storage = new ContactStorage(contactList);
        System.out.println("_____________SUCCESSFULLY UPDATED_____________");
        System.out.println("______________________________________________");
+   }
+
+   private void messageError(){
+       System.out.println("____________________________INPUT ERROR__________________________________");
+       System.out.println("____________________PLEASE READ INSTRUCTION______________________________");
    }
 
 }

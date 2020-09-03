@@ -4,7 +4,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
-public class ContactStorage {
+public final class ContactStorage {
     private ArrayList<Contact>contactArrayList;
     private ArrayList<ContactReadData>deletedList;
     private int deletedNumber = 1;

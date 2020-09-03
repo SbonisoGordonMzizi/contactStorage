@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class SearchContact {
+public final class SearchContact {
     private String firstName;
     private String secondName;
     private String surname;

@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class ContactDelete {
+public final class  ContactDelete {
     private ArrayList<ContactReadData> searchResult;
     private String searchByname;
     private int controller;

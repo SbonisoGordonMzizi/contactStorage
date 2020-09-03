@@ -1,4 +1,4 @@
-public class ContactReadData {
+public final class ContactReadData {
 
     private String firstName;
     private String secondName;

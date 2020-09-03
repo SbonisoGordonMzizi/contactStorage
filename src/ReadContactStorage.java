@@ -7,7 +7,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class ReadContactStorage {
+public final class ReadContactStorage {
     private ArrayList<ContactReadData>contactList = new ArrayList<>();
 
     public ReadContactStorage() {

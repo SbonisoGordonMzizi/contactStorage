@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class ContactViews {
+public final class ContactViews {
     private ArrayList<ContactReadData> contactList;
     private String viewType = "basic";
 
