@@ -1,14 +1,29 @@
 # contactStorage
-```d
-This project is a simple contact storage, 
-contactStorage use file to store contact details.
+A Java console application that allows users to store, view, delete, update, and search for contact details using a file to store the information.
+
+
+# Features
 ```
-#### features
-```f
-allow users to store all their contact details
-User can Add contacts,
-View contacts, 
-Delete contacts,
-Update conatcts,
-Search for a contact.
+Add contacts
+View contacts
+Delete contacts
+Update contacts
+Search for a contact
 ```
+# Usage
+To use this application, clone the repository and open it in Visual Studio. Build and run the solution to access the main menu, where you can choose to add, view, delete, update, or search for a contact. Follow the prompts to input or modify the necessary information.
+
+# Requirements
+```
+Java 8 or higher
+Maven building tool
+```
+
+# Notes
+```
+The application stores contact information in a file called "contacts.txt" in the root directory of the project.
+The file is formatted as follows: [Name],[Phone],[Email] with each contact separated by a new line.
+The search function only searches for matches in the name field.
+```
+
+
