@@ -16,7 +16,6 @@ To use this application, clone the repository and open it in Visual Studio. Buil
 # Requirements
 ```
 Java 8 or higher
-Maven building tool
 ```
 
 # Notes
